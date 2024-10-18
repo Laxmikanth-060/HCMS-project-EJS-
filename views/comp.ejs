@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raise Complaint</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="head"><div align="center" class="hd" align="center"><br><h3 class="hm"><%= user1 %></h3></div></header>
+   <div align="center"><br> <h1>Raise Complaint</h1></div>
+   <div align="center" class="wrapper"><br>
+    <form id="user" method="post" action="http://localhost:8000/home/loginstudent/complaint/raisecomplaint"> <br><br>   <!-- <label for="#cat">Complaint category:</label> -->
+   <select id="cat" name="cat" required>
+    <option value="none">choose complaint category</option>
+    <option value="electrical">electrical</option>
+    <option value="carpenter">carpentor work</option>
+    <option value="cleaning">cleaning</option>
+   </select><br><br><br>
+   <select id="hstl" name="hostel" required>
+    <option value="none">select hostel</option>
+    <option value="BH-1">BH-1</option>
+    <option value="BH-2">BH-2</option>
+    <option value="GH-1">GH-1</option>
+    <option value="GH-2">GH-2</option>c
+    <option value="OBH">Old Boys Hostel</option>
+    <option value="OGH">Old Girls Hostel</option>
+   </select><br><br><br>
+   <select id="wing" aria-placeholder="hello" name="wing" required>
+    <option value="none">select wing</option>
+    <option value="East">east</option>
+    <option value="West">west</option>
+    <option value="South">south</option>
+    <option value="North">north</option>
+   </select><br><br><br>
+   <input name="room" placeholder="enter room number" required><br><br>
+   <!-- <input name="time" type="datetime-local"><br><br> -->
+   <textarea placeholder="add info..." name="info" ></textarea><br><br>
+   <input type="file" accept="image/*">
+   <input type="submit" value="upload"><br><br>
+   <input name="username" value="<%=user1%>" type="hidden">
+   <button id="userbtn">Submit</button>
+</form>
+
+</div>
+
+   <script>
+        let cat=document.querySelector("#cat");
+        let body=document.querySelector("body");
+        let btn=document.querySelector("button");
+        btn.addEventListener("click",(req,res)=>{
+            alert("complaint successfully submitted");
+        })
+        
+        
+   </script>
+</body>
+</html>

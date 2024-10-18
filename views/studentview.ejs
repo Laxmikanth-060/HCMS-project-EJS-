@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student view</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        td {
+  height: 50px;
+  vertical-align: center;
+}
+th {
+  height: 50px;
+  vertical-align: center;
+}
+td {
+    /* width: 50px; */
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+        </style>
+</head>
+<body>
+    <header class="head"><div align="center" class="hd" align="center"><br><h3 class="hm"><%= user2%></h3></div></header><br>
+   <div align="center"><h1>Complaints you have raised</h1> 
+   <h3 id="jkl">No.of Complaints: <%= count %></h3><br> </div>
+    <!-- <% for(i of check){ %>
+        <div align="center" class="vdb"><br>
+            <form >
+              <p><b>User_id: &nbsp; <%= i.username%></b></p>
+              <p>category: &nbsp;<%= i.cat %></p>
+               <p>Hostel: &nbsp;<%= i.hostel %></p>
+               <p>Wing: &nbsp;<%= i.wing %></p>
+               <p>Room: &nbsp; <%= i.room %></p>
+               <p>Info: &nbsp; <%= i.info %></p>
+               <p>Status: &nbsp;<b><%= i.Status %></b></p><br>
+            </form>
+            </div>
+        <% } %> -->
+     <table>    
+        <tr> 
+            
+          <th>category</th>
+            <th>Hostel</th>
+            <th>Wing</th>
+            <th>Room</th>
+            <th>Info</th>
+            <th>Raised Date</th>
+            <th>Resolved Date</th>
+            <th>Status</b></th>
+            <th>Delete</th>
+          </tr>    
+        <% for(i of check){ %>
+             <tr>
+               
+                <td><%= i.cat %></td>
+                 <td><%= i.hostel %></td>
+                 <td><%= i.wing %></td>
+                 <td><%= i.room %></td>
+                 <td> <%= i.info %></td>
+                 <td><%= i.time %> </td>
+                 <td><%= i.resolvedtime %></td>
+                 <td><b><%= i.Status %></b></td>
+                 <td><form method="post" action="http://localhost:8000/home/loginstudent/complaint/delete">
+                  <input name="del" value="<%= i._id %>" type="hidden">
+                  <input name="user2" type="hidden" value="<%= user2 %>">
+                  <button>Delete</button>
+                </form></td>
+                
+             </tr>
+                
+            <% } %>
+     </table>
+</body>
+</html>

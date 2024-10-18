@@ -1,0 +1,245 @@
+footer{
+
+   
+     margin-top: 79px;
+     /* margin-left: 580px; */
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+   
+ }
+ .navigation a{
+
+    color: rgb(39, 39, 155);
+    font-weight: 500;
+    margin-left:15px;
+    font-size: 22px;
+
+}
+
+#cont{
+    color: white;
+    background-color:rgb(194, 145, 53);;
+    border-radius: 10%;
+    margin-top: 80px;
+    height: 180px;
+    width: 300px;   
+}
+
+#mine{
+    color: rgb(18, 18, 151);
+}
+
+h1{
+    color: rgb(35, 35, 180);
+}
+
+#s{
+    background-color: rgb(179, 132, 194);
+    /* border-radius: 14%; */
+    height: 150px;
+    width: 250px;
+    margin-top: 100px;
+    margin-right: 520px;
+}
+
+#w{
+    background-color: rgb(179, 132, 194);
+    /* border-radius: 14%; */
+    height: 150px;
+    width: 250px;
+    margin-top: -203px;
+    margin-left: 520px;
+}
+
+.nameplate{
+    color: rgb(102, 18, 136);
+}
+
+.if{
+    color: rgb(9, 74, 90);
+    background-color: rgb(86, 188, 219);
+}
+body{
+    background-color: rgb(228, 179, 179);
+}
+/* .btn{
+    color: rgb(45, 45, 77);
+    background-color: rgb(228, 185, 218);
+    /* width: 70px;
+    height: 30px; 
+}
+ .btn:hover{
+    background-color: rgb(35, 124, 35);
+    color: white;
+    transition-duration: 0.25s;
+}  */
+.btn2{
+    color: rgb(45, 45, 77);
+    background-color: rgb(223, 144, 204);
+}
+.btn2:hover{
+    background-color: rgb(84, 139, 84);
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+#img{
+    margin-top: -230px;
+}
+
+.ab{
+    color: rgb(115, 12, 156);
+    background-color: rgb(157, 94, 230);
+    border-radius: 10%;
+    margin-top: 80px;
+    height: 330px;
+    width: 250px;
+}
+.abc{
+    color: rgb(115, 12, 156);
+    background-color: rgb(81, 131, 120);
+    border-radius: 10%;
+    margin-top: 80px;
+    height: 350px;
+    width: 260px;
+}
+input{
+    background-color: rgb(91, 136, 219);
+    border: solid black 0.25px;
+}
+
+
+
+.db{
+    background-color: rgb(182, 137, 81);
+    /* height: 160px;*/
+    width: 270px; 
+    border-radius: 13%;
+    display: inline-block; 
+    margin-left: 50px;
+    margin-bottom: 35px;
+}
+
+.reg{
+    color: rgb(14, 14, 207);
+}
+
+.cp{
+    background-color: rgb(221, 160, 85);
+    color: white;
+    height: 150px;
+    width: 270px;  
+    border-radius: 13%;
+    /* display: inline-block;  */
+    margin-left: px;
+    margin-bottom: 35px;
+}
+
+.head{
+    margin-left: 1200px;
+    margin-top: 10px;
+    color: black;
+}
+.hd{
+    background-color: rgb(202, 105, 202);
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#user{
+    background-color: rgb(187, 61, 80);
+    height: 400px;
+    width: 340px;
+    border-radius: 9%;
+}
+#userbtn{
+    color: rgb(47, 47, 158);
+    background-color: rgb(228, 71, 191);
+    width: 70px;
+    height: 30px;
+}
+#userbtn:hover{
+    background-color: rgb(41, 114, 41);
+    color: rgb(214, 196, 196);
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+.dc{
+    background-color:rgb(126, 143, 126);
+    height: 110px;
+    width: 200px;
+    margin-left:560px;
+    margin-bottom: 50px;
+    border-radius: 18%;
+}
+
+.ma{
+    height: 30px;
+    width: 68px;
+    cursor: pointer;
+    border-radius: 16%;
+}
+
+.vdb{
+    background-color: rgb(202, 105, 202);
+    /* height: 160px;*/
+    width: 270px; 
+    border-radius: 13%;
+    display: inline-block; 
+    margin-left: 50px;
+    margin-bottom: 35px;
+}
+
+#jkl{
+    color: crimson;
+}
+
+.hm{
+    margin-bottom: px;
+}
+
+.form{
+    background-color: aquamarine;
+}
+.form:hover{
+   cursor: pointer;
+   background-color: rgb(19, 95, 19);
+}
+
+#out{
+    background-color: rgb(150, 156, 154);
+}
+
+#out:hover{
+    cursor: pointer;
+    background-color: rgb(69, 136, 190);
+}
+
+.dec
+{
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+    color: blue;
+}
+
+#log{
+   
+    margin-left: 80px;
+}
+
+.tab{
+    margin-top: auto;
+}
+
+#iii{
+    height: inherit;
+    size:inherit;
+    /* width: inherit; */
+}

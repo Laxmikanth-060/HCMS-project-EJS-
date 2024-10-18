@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Complaints</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      table, th, td {
+        border:1px solid black;
+      }
+      td {
+  height: 50px;
+  vertical-align: center;
+}
+th {
+  height: 50px;
+  text-align: center;
+}
+td {
+    /* width: 50px; */
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 95%;
+}
+      </style>
+</head>
+<body>
+  <header class="head"><div class="hd"><br><h3 class="hm"><%= user%></h3></div></header>
+    <div align="center"><h1><%= name %> Complaints</h1><h3 id="jkl">No.of Complaints: <b><%= count %></b></h3><h6>Filter count: <b><%=scount%></b></h6></div><br>
+      <!-- <div>
+      <% for(i of check){ %>
+        <div align="center" class="vdb"><br>
+              
+              <p><b>User_id: &nbsp; <%= i.username %></b></p>
+              <p>category: &nbsp;<%= i.cat %></p>
+               <p>Hostel: &nbsp;<%= i.hostel %></p>
+               <p>Wing: &nbsp;<%= i.wing %></p>
+               <p>Room: &nbsp; <%= i.room %></p>
+               <p>Info: &nbsp; <%= i.info %></p>
+               <p>Current Status: &nbsp;<b> <%= i.Status %> </b></p>
+               <form method="post" action="http://localhost:8000/home/loginwarden/complaints/status">
+              <p> Status: &nbsp;<b> <select name="status"> <option value="Accepted">Accepted </option>
+                <option value="resolved">Resolved</option>
+                <option value="rejected">Rejected</option>
+                 </select></p><br><input name="id" type="hidden" value="<%= i.id%>">
+                     <input name="name" type="hidden" value="<%= name %>">
+                     <input name="count" type="hidden" value="<%= count %>">
+                     <input name="user" type="hidden" value="<%= user %>">
+                 <button id="iii" class="form">Update  Status</button></b> <br><br>
+              </form>
+            </div>
+            <% } %>
+            </div> -->
+           <div class="tab" align="center"> 
+            <table>
+              <tr> 
+                <th><b>Stud_id</b></th>
+              <th>category</th>
+                <th>Hostel</th>
+                <th>Wing</th>
+                <th>Room</th>
+                <th>Info</th>
+                <th>Complaint Date</th>
+                <th>Current Status &nbsp; : <form method="post" action="http://localhost:8000/home/loginwarden/complaints/status/filter"><select name="cstate">
+                  <option value="temp">All</option>
+                  <option>Pending</option>
+                  <option>Accepted</option>
+                  <option>Resolved</option>
+                  <option>Rejected</option>
+                  <input name="user" type="hidden" value="<%= user %>">
+                  <input name="name" type="hidden" value="<%= name %>">
+                  <input name="count" type="hidden" value="<%= count %>">
+                </select><button>search</button></form></b></th>
+                <th>Status</th>
+                <th>update</th>
+              </tr>
+      <% for(i of check){ %>
+        
+              <tr>
+              <td><b><%= i.id%></b></td>
+              <td><%= i.cat %></td>
+                <td><%= i.hostel %></td>
+                <td><%= i.wing %></td>
+                <td><%= i.room %></td>
+                <td><%= i.info %></td>
+                <td><%= i.time %></td>
+                <td><b> <%= i.Status %> </b></td>
+               <form method="post" action="http://localhost:8000/home/loginwarden/complaints/status">
+                <td><select name="status"> 
+                  <option value="Accepted">Accepted </option>
+                <option value="Resolved">Resolved</option>
+                <option value="Rejected">Rejected</option>
+                 </select></td><input name="id" type="hidden" value="<%= i._id%>">
+                     <input name="name" type="hidden" value="<%= name %>">
+                     <input name="count" type="hidden" value="<%= count %>">
+                     <input name="user" type="hidden" value="<%= user %>">
+                 <td><button id="iii" class="form">Update  Status</button></td>
+              </form>
+            </tr>
+            
+            <% } %>
+          </table>
+            
+        </div>
+   <!-- <div align="center">  <br><br>
+      <form method="post" action="">
+            <button class="btn btn-warning">Pending</button>
+           </form><br>
+           <form>
+            <button class="btn btn-primary">Accepted</button>
+           </form><br>
+           <form>
+            <button class="btn btn-success">Resolved</button>
+           </form><br>
+           <form>
+            <button class="btn btn-danger">Rejected</button>
+           </form>
+
+
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+              let buttons=document.querySelectorAll("button");
+              for(let btn of buttons){
+              btn.addEventListener("click",(req,res)=>{
+                  alert("Status updated successfully!");
+              });
+            }
+             </script>
+
+      
+</body>
+</html>

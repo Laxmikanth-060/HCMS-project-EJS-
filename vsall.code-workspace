@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "database",
+			"path": "../database"
+		},
+		{
+			"name": "Project",
+			"path": "."
+		},
+		{
+			"name": "REST",
+			"path": "../REST"
+		},
+		{
+			"name": "misso",
+			"path": "../misso"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Project"
+	}
+}

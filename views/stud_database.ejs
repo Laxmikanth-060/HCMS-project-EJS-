@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div align="center">
+        <h1>Student Database</h1>  </div>
+        <% for(i of result){ %>
+        <div class="db" align="center"><br>
+              <p>Username: &nbsp; <%= i.username %></p>
+              <p>Email   : &nbsp;  <%= i.email %></p>
+              <p>Password: &nbsp;<%= i.password %></p><br>
+            </div>
+        <% } %>
+</body>
+</html>

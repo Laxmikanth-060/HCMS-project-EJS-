@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div align="center">
+        <header class="head"><div class="hd"><br><h3 class="hm"><%= check.username%></h3><form action="http://localhost:8000/home/loginwarden/logout"><button id="out">Logout</button></form></div></header>
+        <h1> Total Complaints</h1><h4 id="jkl"><b>Total no.of complaints: </b>&nbsp;<b><%= count %></b></h4><br>
+          </div>
+          <div align="center" class="dc">
+          <form method="post" action="http://localhost:8000/home/loginwarden/complaints">
+            <div ><br><input name="user" type="hidden" value="<%= check.username%>"><br><input name="elec" type="submit" value="electrical" class="ma"></div><br><br>
+          </form></div>
+          <div align="center" class="dc" >
+          <form method="post" action="http://localhost:8000/home/loginwarden/complaints">
+            <div ><br><input name="user" type="hidden" value="<%= check.username%>"><br><input name="carp" type="submit" value="carpenter" class="ma"></div><br><br>
+          </form> </div>
+          <div align="center" class="dc">
+          <form method="post" action="http://localhost:8000/home/loginwarden/complaints">
+            <div ><br><input name="user" type="hidden" value="<%= check.username%>"><br><input name="clean" type="submit" value="cleaning" class="ma"></div><br><br>
+          </form></div>
+        <!-- <% for(i of result){ %>
+        <div class="db" align="center"><br>
+              <p>category: &nbsp;<%= i.cat %></p>
+               <p>Hostel: &nbsp;<%= i.hostel %></p>
+               <p>Wing: &nbsp;<%= i.wing %></p>
+               <p>Room: &nbsp; <%= i.room %></p>
+               <p>Info: &nbsp; <%= i.info %></p><br>
+               
+            </div>
+        <% } %> -->
+   </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complaint page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div align="center">
+  <header class="head"><div align="center" class="hd" align="center"><br><h3 class="hm"><%= check.username%></h3><form action="http://localhost:8000/home/loginstudent/logout"><button id="out">Logout</button></form></div></header><br><br>
+         <h1>Home Page</h1><br>
+         <form method="get" action="http://localhost:8000/home/loginstudent/complaint">
+                      
+           <input name="user1" type="hidden" value="<%= check.username %>">
+            <button class="btn2">Raise Complaint</button> 
+
+         </form><br>
+         <form method="get" action="http://localhost:8000/home/loginstudent/complaint">
+          <input name="user2" type="hidden" value="<%= check.username %>">
+            <button class="btn2"> View Status</button> 
+              <!-- <footer>  </footer> -->
+         </form>
+        </div>
+        <script>  let btn=document.querySelector("button");
+          btn.addEventListener("click",(req,res)=>{
+              alert("you are about to logout!!");
+          })</script>
+
+</body>
+</html>

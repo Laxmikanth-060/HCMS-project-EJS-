@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>student registration</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+   <div align="center">
+    <form class="ab" onsubmit="return validateForm();" method="post" action="http://localhost:8000/home/registerstudent" >
+        <br>
+        <h1 class="reg">Registration</h1>
+        <h5 >Student</h5>
+        <input name="username" placeholder="username" id="u" required/><br><br>
+        <input name="email" placeholder="email-b1*****@rgukt.ac.in" type="email" oninput="checkEmail();" id="mail">
+        <h9 id="msg"></h9><br><br>
+        <input name="password" placeholder="password" type="password" id="pass" required/><br><br>
+        <button class="btn2" type="submit">Register</button>
+         
+    </form>
+   </div>
+   
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+   <script>
+    
+
+    //     let emailInput = document.querySelector("#mail");
+    //     let msg=document.querySelector("#msg");
+
+    // function checkEmail(){
+
+    //    if(!emailInput.value.match(/^b1[0-9]{5}@rgukt\.ac\.in$/)){
+    //         msg.textContent="invalid email..";
+    //         msg.style.color='red';
+    //    }
+    //    else{
+          
+    //     msg.textContent="valid email..";
+    //         msg.style.color='green';
+    //         sendEmail();
+    //         // alert("ok");
+    //    }
+    
+
+    // }
+  
+
+    let emailInput = document.querySelector("#mail");
+        let msg = document.querySelector("#msg");
+
+        function checkEmail() {
+            if (!emailInput.value.match(/^b1[0-9]{5}@rgukt\.ac\.in$/)) {
+                msg.textContent = "Invalid email..";
+                msg.style.color = 'red';
+            } else {
+                msg.textContent = "Valid email..";
+                msg.style.color = 'green';
+            }
+        }
+
+        function validateForm() {
+            // Validate email before form submission
+            if (!emailInput.value.match(/^b1[0-9]{5}@rgukt\.ac\.in$/)) {
+                alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+            }
+
+            // Send email
+            sendEmail();
+            // You can add additional logic or remove the alert below based on your requirements
+            alert("Email sent successfully!");
+            return true; // Allow form submission
+        }
+
+
+
+   function sendEmail() {
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "luckyanubothula2004@gmail.com", // Replace with your email
+            Password : "9DA874F67D42ED7437E35256322B1438B8FD", // Replace with your email password
+            To : document.querySelector("#mail").value,
+            // document.querySelector("#mail").value,
+            From : "luckyanubothula2004@gmail.com", // Replace with your email
+            Subject :  "Hello Mr/Ms."+ document.querySelector("#u").value +" ,Your registration at HCMS (Hostel Complaint Management System) has been successful..! Please make use of this facility to raise any type of complaints regarding hostel amenities.." ,
+            Body : "Your password starting with " + document.querySelector("#pass").value.slice(0,4)+"***** --With regards..@teamHCMS.",
+        }).then(
+            message => {
+                // alert("Email sent successfully to username");
+              
+            },
+            error => alert("Error sending email: " + error)
+        );
+    }
+
+    function ok(){
+        alert("email send successfully!");
+    }
+
+    </script>
+   
+</body>
+</html>
+
+
+<!-- luckyanubothula2004@gmail.com -->
+<!-- 9DA874F67D42ED7437E35256322B1438B8FD -->
+<!-- 2525 -->
+<!-- smtp.elasticemail.com -->
